@@ -50,8 +50,8 @@ nav {
 }
 
 .nav-logo {
-  font-family: var(--serif);
-  font-weight: 300;
+  font-family: var(--sans);
+  font-weight: 700;
   font-size: 1rem;
   letter-spacing: 0.06em;
   color: var(--ink);
@@ -106,7 +106,7 @@ section {
 .spotify-embed iframe {
   width: 100%;
   border-radius: 2px;
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
 }
 
 /* ── リスト共通（エピソード・ブログ） ── */
@@ -116,7 +116,7 @@ section {
 }
 
 .ep-item {
-  display: grid;
+  display: block;
   grid-template-columns: 2rem 1fr;
   align-items: baseline;
   gap: 0.75rem;
