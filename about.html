@@ -5,11 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About — ごめんね</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="favicon.ico">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    .about-desc {
+      font-size: 0.88rem;
+      color: var(--ink-muted);
+      line-height: 1.95;
+    }
+
+    .member-list {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .member {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .member-icon {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 2px;
+      background: var(--bg-soft);
+      display: block;
+    }
+
+    .member-name {
+      font-family: var(--sans);
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.75rem;
+    }
+
+    .member-bio {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--ink-muted);
+      line-height: 1.95;
+    }
+
+    .member-bio li {
+      list-style: none;
+      padding: 0;
+    }
+
+    .member-bio li::before {
+      content: "・";
+      margin-right: 0.25rem;
+      color: var(--ink-faint);
+    }
+
+    .member-blog {
+      display: inline-block;
+      margin-top: 0.75rem;
+      font-family: var(--sans);
+      font-size: 0.7rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-faint);
+      text-decoration: none;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 1px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .member-blog:hover {
+      color: var(--ink);
+      border-color: var(--ink);
+    }
+
+    @media (max-width: 600px) {
+      .member {
+        grid-template-columns: 88px 1fr;
+        gap: 1.25rem;
+      }
+      .member-icon {
+        width: 88px;
+        height: 88px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <nav>
+  <nav>
     <div class="nav-inner">
       <a class="nav-logo" href="index.html">ごめんね</a>
       <ul class="nav-links">
@@ -21,8 +106,61 @@
     </div>
   </nav>
 
-  <section class="hero container">
-    <p class="coming-soon">Coming soon</p>
+  <section class="container" style="padding-bottom: 3rem;">
+    <p class="section-label">About</p>
+    <p class="about-desc">
+      ごめんねは、森下、森下の幼馴染の木村、森下のブログを崇拝している中村の 3 人で喋る Podcast。<br/>
+      みんなで本当のことを話します。森下はたまに出演します。<br/>
+      Spotify と Apple Podcast で配信中。
+    </p>
+  </section>
+
+  <section class="container" style="border-bottom: none; padding-bottom: 3rem;">
+    <p class="section-label">Members</p>
+    <div class="member-list">
+
+      <div class="member">
+        <img class="member-icon" src="images/morishita.jpg" alt="森下">
+        <div>
+          <p class="member-name">森下</p>
+          <ul class="member-bio">
+            <li>2001 年生まれ</li>
+            <li>秩序好き</li>
+            <li>早寝早起き</li>
+          </ul>
+          <a class="member-blog" href="https://magicmirror.hatenadiary.jp/" target="_blank" rel="noopener">magicmirror</a>
+        </div>
+      </div>
+
+      <div class="member">
+        <img class="member-icon" src="images/kimura.jpg" alt="木村">
+        <div>
+          <p class="member-name">木村</p>
+          <ul class="member-bio">
+            <li>男性</li>
+            <li>滋賀県育ち、東京在住</li>
+            <li>ぎゅっと握ると大きな音が鳴って光る</li>
+            <li>手に付きにくい</li>
+            <li>O 型</li>
+          </ul>
+          <a class="member-blog" href="https://note.com/sapientemamo_11" target="_blank" rel="noopener">梁</a>
+        </div>
+      </div>
+
+      <div class="member">
+        <img class="member-icon" src="images/nakamura.jpg" alt="中村">
+        <div>
+          <p class="member-name">中村</p>
+          <p class="member-bio">
+            2001 年生まれ、岐阜県出身。元バスケ部。<br/>
+            学生時代は京都でプロテインとミニマリストについて研究をしていた。<br/>
+            現在は東京在住、IT 企業勤務。
+          </p>
+          <a class="member-blog" href="https://boldmove.hatenablog.com/" target="_blank" rel="noopener">大胆な動き</a>
+        </div>
+      </div>
+
+    </div>
   </section>
 
   <footer>
